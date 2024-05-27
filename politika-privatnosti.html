@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Politika privatnosti - FokusPoint Fotografija</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+</head>
+<body>
+<header class="absolute inset-x-0 top-0 z-50">
+    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">FokusPoint</span>
+                <img class="h-8 w-auto" src="images/logo.svg" alt="">
+            </a>
+        </div>
+        <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+            <a href="/" class="text-sm font-semibold leading-6 text-gray-900">Početna</a>
+            <a href="/o-nama.html" class="text-sm font-semibold leading-6 text-gray-900">O nama</a>
+            <a href="/kontakt.html" class="text-sm font-semibold leading-6 text-gray-900">Kontakt</a>
+            <a href="/portfolio.html" class="text-sm font-semibold leading-6 text-gray-900">Portfolio</a>
+            <a href="/faq.html" class="text-sm font-semibold leading-6 text-gray-900">FAQ</a>
+        </div>
+
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <button id="openContactForm" class="bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2 px-4 rounded">KONTAKTIRAJTE NAS </button> </div>
+
+        <div id="contactFormModal" class="fixed z-10 inset-0 overflow-y-auto hidden">
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="bg-white w-1/2 p-6 rounded shadow-md">
+                    <div class="flex justify-end">
+                        <!-- Close Button -->
+                        <button id="closeContactForm" class="text-gray-700 hover:text-red-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+
+                    <form action="https://domagojpoljakovic.com/f/{form-id}" method="post">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                            <input type="text" id="name" name="name"
+                                   class="w-full p-2 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                            <input type="email" id="email" name="email"
+                                   class="w-full p-2 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                            <textarea id="message" name="message"
+                                      class="w-full p-2 border rounded-md focus:outline-none focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit"
+                                class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-50"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">FokusPoint</span>
+                    <img class="h-8 w-auto" src="images/logo.svg" alt="">
+                </a>
+                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-6 flow-root">
+                <div class="space-y-2 py-6">
+                    <a href="/index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Početna</a>
+                    <a href="/o-nama.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">O nama</a>
+                    <a href="/kontakt.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Kontakt</a>
+                    <a href="/portfolio.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Portfolio</a>
+                    <a href="/faq.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</header>
+
+<nav class="flex mb-4 justify-center relative isolate px-6 pt-20 lg:px-8" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center space-x-1 md:space-x-3 rtl:space-x-reverse">
+        <li class="inline-flex items-center">
+            <a href="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+                </svg>
+                Početna
+            </a>
+        </li>
+        <li aria-current="page">
+            <div class="flex items-center">
+                <svg class="w-3 h-3 text-gray-400 mx-1 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Privacy policy</span>
+            </div>
+        </li>
+    </ol>
+</nav>
+
+<div class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-center text-3xl font-bold mb-4">Politika privatnosti</h1>
+
+        <p class="mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac efficitur odio. Vestibulum commodo augue sed urna laoreet, placerat tristique est finibus. Nunc sed sapien facilisis, fringilla turpis sed, elementum risus. Ut posuere ex nunc, vitae dapibus ligula cursus eget. Maecenas at ante tellus
+        </p>
+
+        <h2 class="text-2xl font-bold mb-2">Proin suscipit</h2>
+
+        <p class="mb-4">
+            Donec lacinia sapien vitae ligula posuere convallis in non lorem. Sed malesuada leo elit, ut malesuada ipsum lobortis et. Suspendisse sollicitudin ante ut lorem pulvinar semper.        </p>
+
+        <ul class="list-disc list-inside mb-4">
+            <li>Vestibulum ut lobortis purus, in pharetra odio.</li>
+            <li>Aenean lectus ligula, vestibulum quis tempor quis</li>
+            <li>Cras tristique pulvinar arcu</li>
+            <li>Suspendisse libero urna</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold mb-2">Quisque at arcu non nibh dapibus cursus</h2>
+
+        <p class="mb-4">
+            Morbi condimentum vitae metus sit amet hendrerit. Pellentesque at nunc enim. In sit amet mi id nulla ultrices laoreet. Nunc dignissim ligula eros, non aliquet est varius nec. Cras euismod fermentum dui vitae mollis.
+        </p>
+
+        <ul class="list-disc list-inside mb-4">
+            <li>Ut ac sapien ac erat ullamcorper ultrices vel ac elit</li>
+            <li>Nullam ornare lacus eu feugiat porta</li>
+            <li>Aliquam eros nulla, condimentum eget tincidunt non</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold mb-2">Duis hendrerit nunc</h2>
+
+        <p class="mb-4">
+     Etiam non facilisis nulla, eget volutpat metus. Ut a purus vel massa dignissim efficitur sed sit amet velit. Suspendisse potenti. Phasellus ultricies sed mauris ac mollis
+        </p>
+
+        <h2 class="text-2xl font-bold mb-2">Cookies</h2>
+
+        <p class="mb-4">
+            Pellentesque porta, odio malesuada fringilla pulvinar, est orci bibendum ipsum, ac feugiat odio orci sed dui. In vitae arcu tellus. Ut sem magna, feugiat ut nibh at, condimentum tincidunt magna. Nulla a ultricies odio, tempor porta risus. Mauris tincidunt, ipsum a consequat fringilla, ipsum risus pellentesque neque, vitae sollicitudin erat tortor eget massa. Donec vitae imperdiet libero. Ut pulvinar imperdiet est, a iaculis massa blandit eget
+        </p>
+
+        <p class="mb-4">
+            Aliquam vel ante diam. Cras tristique, tortor sed maximus condimentum, nunc metus scelerisque massa, quis pellentesque velit ex in lorem. Mauris quis pharetra tortor, non ornare massa. Phasellus elit sapien, pharetra eu dolor et, cursus lacinia augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed at sem ante.
+        </p>
+
+        <h2 class="text-2xl font-bold mb-2">Sed vitae tortor commodo</h2>
+
+        <p class="mb-4">
+            Maecenas rhoncus justo non mauris suscipit, eu mattis lorem pulvinar. Donec est sapien, imperdiet id commodo eu, hendrerit eget risus. Phasellus sodales leo ipsum, sed rhoncus ante finibus ac. Sed augue mauris, consequat id porttitor accumsan, fermentum vel turpis. Morbi sed leo sit amet tortor feugiat ultrices. Nullam pulvinar, ligula venenatis consequat egestas, sapien sapien sodales justo, in convallis mi risus id dolor
+        </p>
+        <a href="https://www.freepik.com/free-photo/close-up-confident-male-employee-white-collar-shirt-smiling-camera-standing-self-assured-against-studio-background_11652938.htm#query=people&position=8&from_view=keyword&track=sph&uuid=7cd50495-24a7-4e11-a361-5c9259ecc037">Image by benzoix</a> on Freepik
+        <a href="https://www.freepik.com/free-photo/lifestyle-people-emotions-casual-concept-confident-nice-smiling-asian-woman-cross-arms-chest-confident-ready-help-listening-coworkers-taking-part-conversation_17096951.htm#query=people&position=3&from_view=keyword&track=sph&uuid=7cd50495-24a7-4e11-a361-5c9259ecc037">Image by benzoix</a> on Freepik
+        <a href="https://www.freepik.com/free-photo/portrait-beautiful-young-woman-standing-grey-wall_13813927.htm#query=people&position=2&from_view=keyword&track=sph&uuid=7cd50495-24a7-4e11-a361-5c9259ecc037">Image by diana.grytsku</a> on Freepik
+        <a href="https://unsplash.com/@albertdera?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Photo by Albert Dera</a> on <a href="https://unsplash.com/photos/mans-grey-and-black-shirt-ILip77SbmOE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        <a href="https://unsplash.com/@jimmyferminphotography?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Photo by Jimmy Fermin</a> on <a href="https://unsplash.com/photos/woman-staring-directly-at-camera-near-pink-wall-bqe0J0b26RQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        <a href="https://unsplash.com/@joshrh19?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Photo by Joshua Rawson-Harris</a> on <a href="https://unsplash.com/photos/woman-wearing-pink-pullover-hoodie-standing-near-wall-dN67hPE5KWY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+
+    </div>
+</div>
+
+<footer class="fixed bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-cyan-950 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-cyan-950 dark:border-gray-600">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-200">© 2024 Stranica napravljena u svrhu predmeta za fakultet. Domagoj Poljaković
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-200 sm:mt-0">
+        <li>
+            <a href="/o-nama.html" class="hover:underline me-4 md:me-6">O nama</a>
+        </li>
+        <li>
+            <a href="/politika-privatnosti.html" class="hover:underline me-4 md:me-6">Politika Privatnosti</a>
+        </li>
+        <li>
+            <a href="/kontakt.html" class="hover:underline">Kontakt</a>
+        </li>
+    </ul>
+</footer>
+
+<script src="js/contactModal.js"></script>
+
+
+</body>
+</html>

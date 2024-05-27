@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Kontakt - FokusPoint Fotografija</title>
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+</head>
+<body>
+
+<header class="absolute inset-x-0 top-0 z-50">
+    <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+            <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">FokusPoint</span>
+                <img class="h-8 w-auto" src="images/logo.svg" alt="">
+            </a>
+        </div>
+        <div class="flex lg:hidden">
+            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+            <a href="/" class="text-sm font-semibold leading-6 text-gray-900">Početna</a>
+            <a href="/o-nama.html" class="text-sm font-semibold leading-6 text-gray-900">O nama</a>
+            <a href="/kontakt.html" class="text-sm font-semibold leading-6 text-gray-900">Kontakt</a>
+            <a href="/portfolio.html" class="text-sm font-semibold leading-6 text-gray-900">Portfolio</a>
+            <a href="/faq.html" class="text-sm font-semibold leading-6 text-gray-900">FAQ</a>
+        </div>
+
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <button id="openContactForm" class="bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2 px-4 rounded">KONTAKTIRAJTE NAS </button> </div>
+
+        <div id="contactFormModal" class="fixed z-10 inset-0 overflow-y-auto hidden">
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="bg-white w-1/2 p-6 rounded shadow-md">
+                    <div class="flex justify-end">
+                        <!-- Close Button -->
+                        <button id="closeContactForm" class="text-gray-700 hover:text-red-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+
+                    <form action="https://domagojpoljakovic.com/f/{form-id}" method="post">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                            <input type="text" id="name" name="name"
+                                   class="w-full p-2 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                            <input type="email" id="email" name="email"
+                                   class="w-full p-2 border rounded-md focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                            <textarea id="message" name="message"
+                                      class="w-full p-2 border rounded-md focus:outline-none focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit"
+                                class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-50"></div>
+        <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">FokusPoint</span>
+                    <img class="h-8 w-auto" src="images/logo.svg" alt="">
+                </a>
+                <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-6 flow-root">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6">
+                        <a href="/index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Početna</a>
+                        <a href="/o-nama.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">O nama</a>
+                        <a href="/kontakt.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Kontakt</a>
+                        <a href="/portfolio.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Portfolio</a>
+                        <a href="/faq.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="flex mb-4 justify-center relative isolate px-6 pt-20 lg:px-8" aria-label="Breadcrumb">
+    <ol class="inline-flex items-center space-x-1 md:space-x-3 rtl:space-x-reverse">
+        <li class="inline-flex items-center">
+            <a href="/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+                <svg class="w-3 h-3 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
+                </svg>
+                Početna
+            </a>
+        </li>
+        <li aria-current="page">
+            <div class="flex items-center">
+                <svg class="w-3 h-3 text-gray-400 mx-1 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400">Kontakt</span>
+            </div>
+        </li>
+    </ol>
+</nav>
+<h2 class="flex mb-4 justify-center font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl dark:text-black relative isolate ">Kontakt</h2>
+
+
+    <section class="mb-32 ">
+
+        <div class="container my-24 mx-auto md:px-6">
+        <div
+                class="block rounded-lg bg-cyan-600 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:cyan-200">
+            <div class="flex flex-wrap items-center">
+                <div class="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+                    <div class="h-[500px] w-full">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45016.20586804486!2d17.957463272643473!3d45.15646342036228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475dba0125e6cc57%3A0xa99cb4401b060ad5!2sSlavonski%20Brod!5e0!3m2!1shr!2shr!4v1716762638591!5m2!1shr!2shr"
+
+                                class="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg" frameborder="0"
+                                allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+                    <div class="flex flex-wrap px-3 pt-12 pb-12 md:pb-0 lg:pt-0">
+                        <div class="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-6/12 md:px-6 lg:w-full xl:w-6/12 xl:px-12">
+                            <div class="flex items-start">
+                                <div class="shrink-0">
+                                    <div class="inline-block rounded-md bg-primary-100 p-4 text-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                             stroke="currentColor" class="h-6 w-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-6 grow">
+                                    <p class="mb-2 font-bold dark:text-white">
+                                        Tehnička podrška
+                                    </p>
+                                    <p class="text-neutral-500 dark:text-neutral-200">
+                                        info@fokuspoint.com
+                                    </p>
+                                    <p class="text-neutral-500 dark:text-neutral-200">
+                                        +385 99 121 8412
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-6/12 md:px-6 lg:w-full xl:w-6/12 xl:px-12">
+                            <div class="flex items-start">
+                                <div class="shrink-0">
+                                    <div class="inline-block rounded-md bg-primary-100 p-4 text-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                             stroke="currentColor" class="h-6 w-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-6 grow">
+                                    <p class="mb-2 font-bold dark:text-white">
+                                        Zakažite fotografiranje
+                                    </p>
+                                    <p class="text-neutral-500 dark:text-neutral-200">
+                                        photography@fokuspoint.com
+                                    </p>
+                                    <p class="text-neutral-500 dark:text-neutral-200">
+                                        +385 99 121 8413
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                                class="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-6/12 md:px-6 lg:w-full xl:mb-0 xl:w-6/12 xl:px-12">
+                            <div class="align-start flex">
+                                <div class="shrink-0">
+                                    <div class="inline-block rounded-md bg-primary-100 p-4 text-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                             stroke="currentColor" class="h-6 w-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-6 grow">
+                                    <p class="mb-2 font-bold dark:text-white">Zakažite snimanje videa</p>
+                                    <p class="text-neutral-500 dark:text-neutral-200">
+                                        videography@fokuspoint.com
+                                    </p>
+                                    <p class="text-neutral-500 dark:text-neutral-200">
+                                        +385 121 8414
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full shrink-0 grow-0 basis-auto px-3 md:w-6/12 md:px-6 lg:w-full xl:w-6/12 xl:px-12">
+                            <div class="align-start flex">
+                                <div class="shrink-0">
+                                    <div class="inline-block rounded-md bg-primary-100 p-4 text-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                             stroke="currentColor" class="h-6 w-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                  d="M12 12.75c1.148 0 2.278.08 3.383.237 1.037.146 1.866.966 1.866 2.013 0 3.728-2.35 6.75-5.25 6.75S6.75 18.728 6.75 15c0-1.046.83-1.867 1.866-2.013A24.204 24.204 0 0112 12.75zm0 0c2.883 0 5.647.508 8.207 1.44a23.91 23.91 0 01-1.152 6.06M12 12.75c-2.883 0-5.647.508-8.208 1.44.125 2.104.52 4.136 1.153 6.06M12 12.75a2.25 2.25 0 002.248-2.354M12 12.75a2.25 2.25 0 01-2.248-2.354M12 8.25c.995 0 1.971-.08 2.922-.236.403-.066.74-.358.795-.762a3.778 3.778 0 00-.399-2.25M12 8.25c-.995 0-1.97-.08-2.922-.236-.402-.066-.74-.358-.795-.762a3.734 3.734 0 01.4-2.253M12 8.25a2.25 2.25 0 00-2.248 2.146M12 8.25a2.25 2.25 0 012.248 2.146M8.683 5a6.032 6.032 0 01-1.155-1.002c.07-.63.27-1.222.574-1.747m.581 2.749A3.75 3.75 0 0115.318 5m0 0c.427-.283.815-.62 1.155-.999a4.471 4.471 0 00-.575-1.752M4.921 6a24.048 24.048 0 00-.392 3.314c1.668.546 3.416.914 5.223 1.082M19.08 6c.205 1.08.337 2.187.392 3.314a23.882 23.882 0 01-5.223 1.082" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="ml-6 grow">
+                                    <p class="mb-2 font-bold dark:text-white">Ostalo</p>
+                                    <p class="text-neutral-500 dark:text-neutral-200">
+                                        other@fokuspoint.com
+                                    </p>
+                                    <p class="text-neutral-500 dark:text-neutral-200">
+                                        +385 121 8415
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+<div class="px-5 pt-20 lg:px-8">
+
+</div>
+<footer class="fixed bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-cyan-950 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-cyan-950 dark:border-gray-600">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-200">© 2024 Stranica napravljena u svrhu predmeta za fakultet. Domagoj Poljaković
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-200 sm:mt-0">
+        <li>
+            <a href="/o-nama.html" class="hover:underline me-4 md:me-6">O nama</a>
+        </li>
+        <li>
+            <a href="/politika-privatnosti.html" class="hover:underline me-4 md:me-6">Politika Privatnosti</a>
+        </li>
+        <li>
+            <a href="/kontakt.html" class="hover:underline">Kontakt</a>
+        </li>
+    </ul>
+</footer>
+
+<script src="js/contactModal.js"></script>
+
+</body>
+
+
+</html>

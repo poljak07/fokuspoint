@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const apiKey = 'cd2e7389d55c58d7dbcc9635';  // Zamijenite sa svojim API ključem
+    const apiKey = '{{api}}';  // Upisati apikey, zbog privatnosti prazno
     const apiUrl = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/EUR`;
 
     fetch(apiUrl)

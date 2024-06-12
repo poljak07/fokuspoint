@@ -199,6 +199,7 @@
         </div>
     </section>
 <section class="mb-32 flex justify-center" id="cjenik">
+
     <div class="flex">
         <div class="-m-1.5 overflow-x-auto">
             <div class="p-1.5 min-w-full inline-block align-middle">
@@ -209,36 +210,36 @@
                             <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Usluga</th>
                             <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Cijena</th>
                             <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Zakaži</th>
-
                         </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
                         <tr>
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-500 dark:text-gray-500">Sat vremena slikanja</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600 dark:text-gray-600">45</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600 dark:text-gray-600 price" data-eur="45">45 EUR</td>
                             <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
                                 <button id="openContactForm" type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Zakaži termin</button>
                             </td>
                         </tr>
-
                         <tr>
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-500 dark:text-gray-500">Sat vremena uređivanja fotografija</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600 dark:text-gray-600">27</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600 dark:text-gray-600 price" data-eur="27">27 EUR</td>
                             <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
                                 <button id="openContactForm" type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Zakaži termin</button>
                             </td>
                         </tr>
-
                         <tr>
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-500 dark:text-gray-500">Sat vremena snimanja video materijala</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600 dark:text-gray-600">31</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600 dark:text-gray-600 price" data-eur="31">31 EUR</td>
                             <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
-                                <button id="openContactForm" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Zakaži termin</button>
+                                <button id="openContactForm" type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">Zakaži termin</button>
                             </td>
                         </tr>
                         </tbody>
-                         <div class="text-center">
-                             <p>Sve cijene su izražene u eurima.</p>
+
+                        <div class="text-center">
+                            <button id="eurBtn" class="px-4 py-2 bg-blue-500 text-white rounded">€</button>
+                            <button id="usdBtn" class="px-4 py-2 bg-green-500 text-white rounded">$</button>
+                            <p id="currency-note">Sve cijene su izražene u eurima.</p>
                             <p id="rate">Dohvaćanje podataka...</p>
                         </div>
                     </table>
@@ -247,6 +248,7 @@
         </div>
     </div>
 </section>
+
     <section class="mb-32 text-center bg-cyan-600 dark:bg-cyan-600" id="recenzije">
         <div class="container my-24 mx-auto md:px-6 px-6 pt-20 lg:px-8 py-10 ">
 
